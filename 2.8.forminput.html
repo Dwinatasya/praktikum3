@@ -1,0 +1,22 @@
+<html>
+    <head>
+       <title>Contoh Program javaSceipt</title>
+    </head>
+    <script LANGUAGE = "JavaScript"> 
+    function test(){
+        var val1=document.kirim. T1.value
+        //seleksi mengunkan if else
+        if (val1%2==0)
+        document.kirim.T2.value ="bilangan genap"
+        else
+        document.kirim.T2.value ="bilangan ganjil"
+    }
+    </script>
+    <body><!--pengunaan form input dengan javascript-->
+       <form method="POST" name="kirim">
+            <!--menampilkan hasil input pada jendela browser-->
+           <p> Bil <input type="text" name="T1" size="20">merupakan bil <input type="text" name="T2" size="20"></p>
+           <p><input type="button" value="TEBAK" name="B1" onclick=test()></p>
+       </form>
+    </body>
+</html>

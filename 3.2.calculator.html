@@ -1,0 +1,66 @@
+<html>
+<head>
+ <title>Calculator</title> 
+</head>
+<script LANGUAGE = "JavaScript">
+    function tambah(){ 
+    /* pengunaan parseFloat() merubah variabel
+        dengan parameter tertentu menjadi bilangan desimal*/
+     var Bil1=parseFloat(document.calculator.Bil1.value);
+     var Bil2=parseFloat(document.calculator.Bil2.value);
+     var hasil= Bil1+Bil2;
+     //menmapilakan hasil pada form cakulator hasil
+     document.calculator.hasil.value=hasil;
+    }
+    function kurang(){
+     var Bil1=parseFloat(document.calculator.Bil1.value);
+     var Bil2=parseFloat(document.calculator.Bil2.value);
+     var hasil= Bil1-Bil2;
+     document.calculator.hasil.value=hasil;
+    }
+    function kali(){
+     var Bil1=parseFloat(document.calculator.Bil1.value);
+     var Bil2=parseFloat(document.calculator.Bil2.value);
+     var hasil= Bil1*Bil2;
+     document.calculator.hasil.value=hasil;
+    }
+    function bagi(){
+     var Bil1=parseFloat(document.calculator.Bil1.value);
+     var Bil2=parseFloat(document.calculator.Bil2.value);
+     var hasil= Bil1/Bil2;
+     document.calculator.hasil.value=hasil;
+    }
+    function clean(){ //fungsi pembersihan pada button
+        document.calculator.Bil1.value=" ";
+        document.calculator.Bil2.value=" ";
+        document.calculator.hasil.value=" ";
+    }
+    </script>
+<body>
+ <form name="calculator">
+    <h3>Calculator Sederhana</h3>
+    <table>
+        <!-- membuat tabel calculator-->
+        <tr>
+            <td><b>Bilangan 1</b></td><td>:</td><td><input type="number" name="Bil1"></td>
+            </tr>
+            <tr>
+            <td><b>Bilangan 2</b></td><td>:</td><td><input type="number" name="Bil2"></td>
+            </tr>
+            <tr>
+                <td><b>hasil</b></td><td>:</td><td><input type="number" name="hasil"></td>
+            </tr>
+            <tr> <b></b>
+                <td colspan="3"> <!--menggabungkan 2 kolom ke samping-->
+                    <!--memasukan butoon +,-,x,/ , dan hapus pada jendela browser-->
+                    <input type="button" value=" + " onclick="tambah()">
+                    <input type="button" value=" - "  onclick="kurang()">
+                    <input type="button" value=" * " onclick="kali()">   
+                    <input type="button" value=" / " onclick="bagi()" >
+                    <input type="button" value="Hapus" onclick="clean()"> 
+                </td>
+            </tr>
+        </table>
+ </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Mengkoversi Nilai Angka Menjadi Huruf dengan javaScript</title>
+    </head>
+    <script LANGUAGE = "JavaScript"> 
+        function test(){
+            var val1=document.nilai.T1.value 
+            if (val1<=40)  //jika val1 40 maka nilai E
+            document.nilai.T2.value ="E"
+            else if (val1<=55) //jika val1 55 maka nilai D
+            document.nilai.T2.value ="D"
+            else if (val1<=60) //jika val1 60  maka nilai C
+            document.nilai.T2.value ="C"
+            else if (val1<=65) //jika val1 65 maka nilai BC
+            document.nilai.T2.value ="BC"
+            else if (val1<=70) //jika val1 70 maka nilai B
+            document.nilai.T2.value ="B"
+            else if (val1<=80) //jika val1 80 maka nilai AB
+            document.nilai.T2.value ="AB"
+            else if (val1<=100) //jika val1 100 maka nilai A
+            document.nilai.T2.value ="A"
+            else  //lainnya val1 > 100 maka nilai tidal terdaftar
+            document.nilai.T2.value ="Tidak Terdaftar"
+        }
+        function clean(){  //fungsi pembersihan pada botton T1  dan T2
+            document.nilai.T1.value =" " 
+            document.nilai.T2.value =" "
+        }
+    </script>
+    <body>
+        <form method="POST" name="nilai"> 
+            <!--memasukan butoon dan text box pada jendela browser-->
+            <p> Masukan Nilai <input type="text" name="T1" size="20"> 
+                Nilai Anda: <input type="text" name="T2" size="20"></p>
+            <p><input type="button" value="PERIKSA" name="B1" onclick=test()> 
+                <input type="button" value="HAPUS" name="B2" onclick=clean()></p>
+        </form>
+    </body>
+</html>

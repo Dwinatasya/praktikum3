@@ -1,0 +1,42 @@
+<html>
+    <head>
+       <title>Contoh Program javaSceipt</title>
+    </head>
+    <script LANGUAGE = "JavaScript"> 
+    //penggunaan operator switch untuk seleksi kondisi
+    function test()
+    {   //memasukan data melalui prompt
+        val1=window.prompt("Input nilia (1-5)")
+        switch(val1)
+        {
+            case"1": //kasus 1
+            document.write("bilangan satu")//menuliskan "bilangan satu"
+            break
+
+            case"2":
+            document.write("bilangan dua");
+            break
+
+            case"3":
+            document.write("bilangan tiga");
+            break
+
+            case"4":
+            document.write("bilangan emapat");
+            break
+
+            case"5":
+            document.write("bilangan lima");
+            break
+
+            default:
+            document.write("bilangan lain");
+        }
+    }
+       </script>
+    <body>
+        <!--masukan button untuk hasil fungsi test pada browser-->
+        <input type="buttpn" name="button1" value="switch"
+        onclick=test()>
+    </body>
+</html>
